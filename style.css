@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, gray, black);
+    animation: masukWeb 1.5s ease;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding-bottom: 40px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999;
+    animation: bukaLayar 1.5s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes bukaLayar {
+    0% {
+        clip-path: circle(150% at 50% 50%);
+    }
+
+    60% {
+        clip-path: circle(40% at 50% 50%);
+    }
+
+    100% {
+        clip-path: circle(0% at 50% 50%);
+    }
+}
+
+@keyframes masukWeb {
+    0% {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    padding: 8px;
+    border: 4px solid white;
+    border-radius: 20px;
+    display: block;
+    margin: 30px auto 20px;
+    animation: fotoMasuk 1.2s ease 0.8s backwards;
+    transition: 0.5s;
+}
+
+img:hover {
+    transform: scale(1.06) translateY(-10px);
+    border-radius: 30px;
+}
+
+@keyframes fotoMasuk {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-8deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.audio-countainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    animation: laguMasuk 1.2s ease 1.2s backwards;
+}
+
+.lagu {
+    display: block;
+    border-radius: 15px;
+}
+
+@keyframes laguMasuk {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: purple;
+    text-align: center;
+    font-size: 35px;
+    margin: 30px 10px;
+    text-shadow:
+        0 0 5px purple,
+        0 0 10px purple,
+        0 0 20px #b000ff,
+        0 0 35px #b000ff;
+    animation: judulUnggu 2s infinite alternate;
+    transition: 0.5s;
+}
+
+h1:hover {
+    transform: scale(1.08);
+    color: #d000ff;
+    text-shadow:
+        0 0 10px purple,
+        0 0 20px #b000ff,
+        0 0 40px purple,
+        0 0 60px #d000ff;
+}
+
+@keyframes judulUnggu {
+    from {
+        transform: scale(1);
+        text-shadow:
+            0 0 5px purple,
+            0 0 10px purple,
+            0 0 20px #b000ff;
+    }
+
+    to {
+        transform: scale(1.04);
+        text-shadow:
+            0 0 10px purple,
+            0 0 20px #b000ff,
+            0 0 35px purple,
+            0 0 45px #d000ff;
+    }
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin: 30px 0 20px;
+}
+
+p {
+    margin: 15px;
+}
+
+.deskripsi {
+    text-align: center;
+    margin: 20px;
+}
+
+ul,
+ol {
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+li {
+    margin: 8px;
+}
+
+.teman {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #222;
+    color: white;
+    min-height: 220px;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px black;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h2 {
+    margin: 0 0 20px;
+    color: white;
+}
+
+.card p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.card:hover {
+    background: purple;
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px purple;
+}
+
+table {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.5);
+    animation: tabelMasuk 1.2s ease 1s backwards;
+}
+
+th,
+td {
+    border: 1px solid white;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: purple;
+    color: white;
+}
+
+tr {
+    transition: 0.3s;
+}
+
+tr:hover {
+    background-color: #4b0082;
+    transform: scale(1.01);
+}
+
+@keyframes tabelMasuk {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+}
+
+nav a {
+    color: white;
+    background: purple;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px black;
+}
+
+nav a:hover {
+    background: #b000ff;
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px purple;
+}
+
+.tombol-next {
+    display: block;
+    width: 180px;
+    margin: 50px auto 30px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, purple, #b000ff);
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 10px purple;
+    transition: 0.4s;
+}
+
+.tombol-next:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #b000ff, purple);
+    box-shadow:
+        0 0 15px purple,
+        0 0 30px #b000ff,
+        0 0 45px purple;
+}
+
+.musik-nyala {
+    animation: kedip 0.5s infinite alternate;
+}
+
+@keyframes kedip {
+    from {
+        filter: brightness(1);
+    }
+
+    to {
+        filter: brightness(1.5);
+    }
+}
+
+@media (max-width: 600px) {
+
+    img {
+        width: 250px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin: 25px 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .teman {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 30px auto;
+    }
+
+    .card {
+        min-height: 180px;
+    }
+
+    table {
+        width: 95%;
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px 4px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 180px;
+        text-align: center;
+    }
+
+    .tombol-next {
+        width: 160px;
+    }
+
+    .audio-countainer {
+        padding: 0 10px;
+    }
+
+    .lagu {
+        max-width: 100%;
+    }
+}

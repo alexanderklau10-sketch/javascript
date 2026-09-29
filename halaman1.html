@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragnamok</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <img src="WhatsApp Image 2026-09-08 at 14.08.21.png"
+         alt="Foto Devan">
+
+    <div class="audio-countainer">
+        <audio controls class="lagu">
+            <source src="MukaRakat - M.P.O (Official Music Video).mp3" type="audio/mpeg">
+            Browsermu tidak mendukung pemutaran audio.
+        </audio>
+    </div>
+
+    <nav>
+        <a href="halaman1.html">Home</a>
+        <a href="halaman2.html">Next →</a>
+    </nav>
+
+    <h1>Perencanaan Push Rank Setelah Reset Season</h1>
+
+    <p>
+        <dd>Nama: Devan</dd>
+        <dd>NIM: 255314049</dd>
+        <dd>RANK: Glory 68</dd>
+    </p>
+
+    <p style="color:red;">
+        <b>
+            <i>Saya akan imo season depan.</i>
+        </b>
+    </p>
+
+    <p>
+        Dihina 90 hari belum imo saya diam tapi season depan saya akan lawan!!!
+    </p>
+
+    <p>
+        <u>Alasan</u>
+    </p>
+
+    <p>
+        - belum imortal sebab saya sedang fokus menjalani kuliah
+    </p>
+
+    <h2>Daftar teman mabar</h2>
+
+    <div class="teman">
+
+        <div class="card">
+            Aldi
+        </div>
+
+        <div class="card">
+            Putra
+        </div>
+
+        <div class="card">
+            Retno
+        </div>
+
+    </div>
+
+    <h2>Rank</h2>
+
+    <ol>
+        <li>Epic</li>
+        <li>Legend</li>
+        <li>Mitic</li>
+    </ol>
+
+    <h2>Data Teman</h2>
+
+    <table>
+
+        <tr>
+            <th>Nama</th>
+            <th>Asal</th>
+            <th>Game</th>
+        </tr>
+
+        <tr>
+            <td>Aldi</td>
+            <td>Jambi</td>
+            <td>Mobile Legends</td>
+        </tr>
+
+        <tr>
+            <td>Putra</td>
+            <td>Manado</td>
+            <td>Mobile Legends</td>
+        </tr>
+
+        <tr>
+            <td>Devan</td>
+            <td>Atambua</td>
+            <td>EPEP</td>
+        </tr>
+
+    </table>
+
+    <a href="halaman2.html" class="tombol-next">
+        NEXT →
+    </a>
+
+    <script>
+        const audio = document.querySelector(".lagu");
+
+        audio.addEventListener("play", function() {
+            document.body.classList.add("musik-nyala");
+        });
+
+        audio.addEventListener("pause", function() {
+            document.body.classList.remove("musik-nyala");
+        });
+
+        audio.addEventListener("ended", function() {
+            document.body.classList.remove("musik-nyala");
+        });
+    </script>
+
+</body>
+
+</html>
